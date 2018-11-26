@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title>Ejercicios </title>
+	</head>
+	<body>
+	<h1> Ejercicios</h1>
+	<script>
+	//Primer ejercicio
+		var veces = 0;
+		var contador = 5;
+		while (contador > veces) {
+			alert("Valor de contador es " + contador); contador = contador - 1;
+		}
+		//Segundo ejercicio
+		var numero
+		 numero = prompt( "Introduce un número")
+		var veces = 0;
+		while (numero > veces) {
+			alert("Valor de contador es " + numero); numero = numero - 1;
+		}
+		//Tercer ejercicio
+		var principio
+		var fin
+		principio = prompt( "Introduce el primer número")
+		principio = parseFloat(principio); //parseFloat es para combertir texto en número
+		fin = prompt( "Introduce el segundo valor")
+		fin = parseFloat(fin); //parseFloat es para combertir texto en número
+		while (principio > fin) {
+			alert("Valor de contador es " + principio); principio = principio -1;
+			}
+			//Tercer ejercicio 2ª parte
+		var principio1
+		var fin1
+			principio1 = prompt( "Introduce el primer número")
+			principio1 = parseFloat(principio1); //parseFloat es para combertir texto en número
+			fin1 = prompt( "Introduce el segundo valor")
+			fin1 = parseFloat(fin1); //parseFloat es para combertir texto en número
+		while (principio1 < fin1) {
+			alert("Valor de contador es " + principio1); principio1 = 1 + principio1;
+			}
+			
+			
+			//Forma alternativa del ejercicio 3:
+		var inicio = prompt("Indique el primer número");
+		var fin2 = prompt("Indique el segundo número");	
+		inicio = parseFloat(inicio);
+		fin2 = parseFloat(fin2);
+		
+		var contador = inicio;
+		
+		if (inicio < fin2) {
+			while (contador < fin2){
+			alert(contador); contador = contador + 1;
+			}	
+		}	
+		
+		//Con el bucle fuera del if (o el if dentro del bucle)
+		//Sin ningún "if" (dos bucles) (DONE)
+		//Con un único while, sin IF (que baje y suba con un unico)
+	</script>
+	</body>	
+</html> 
