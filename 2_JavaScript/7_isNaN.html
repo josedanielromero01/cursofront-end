@@ -1,0 +1,37 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title> IsNaN</title>
+	</head>
+	<body>
+	<h1>IsNaN </h1>
+	<script>
+	//CON VALIDACIÓN DE DATOS: Pedir el inicio y el fin de contador hasta que sea un número, es decir, asegurarse de que los valores que introduce el usuario son números, ¿Cómo? Con un bucle que se ejecuta una y otra vez mientras que el valor (inicio o fin) NO es un número.
+	//Por separado todos funcionan, todos juntos NO!
+
+	var inicio
+	var fin 
+	//Sin variable intermedia
+	while ( isNaN(inicio) ) {
+		inicio = prompt("Indique el inicio ");
+	}		
+		//Con variable intermedia
+	var inicioNoEsUnNumero = isNaN(inicio);
+	while ( inicioNoEsUnNumero ) {
+		inicio = prompt("Introduzca un número ");
+		inicioNoEsUnNumero = isNaN(inicio);
+	} 
+		//Con variable intermedia legible
+	var inicioEsUnNumero =! isNaN(inicio);
+	while (inicioEsUnNumero ==false) {
+		inicio = prompt("Introduzca un número ");
+		inicioEsUnNumero =! isNaN(inicio);
+	}
+	while (isNaN(inicio)) {
+		inicio = prompt("Indique el inicio");
+	}	
+	</script>
+	</body>
+	
+</html> 

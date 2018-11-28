@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title> Encabezado</title>
+	</head>
+	<body>
+	<h1>Encabezado</h1>
+	<script>
+	var nombre = "";
+	var textoEdad = "";
+	var edad = parseInt(textoEdad);	
+	while (isNaN(edad)) {
+		textoEdad = prompt("Indique su edad");
+		edad = parseInt(textoEdad);
+	}	
+		while (edad <= 0 ) {
+			textoEdad = prompt("Indique su edad");
+			edad = parseInt(textoEdad);
+		}
+	//Hace la misma función con un único bucle
+	/*while ( isNaN(edad) || edad <= 0) {
+		textoEdad = prompt("Indique su edad:");
+		edad = parseInt(textoEdad);
+	}	*/
+	while (nombre == "") {
+		nombre = prompt("Indique su nombre ");
+	}	
+	//parseInt: Convierte texto en un numero
+	//"27"
+	//"texto sin num" --> NaN
+	document.write("<br/>Anda! Te llamas "+ nombre + " y tienes " +edad);
+	</script>
+	</body>
+	
+</html> 

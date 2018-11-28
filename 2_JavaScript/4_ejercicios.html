@@ -20,7 +20,7 @@
 		while (numero > veces) {
 			alert("Valor de contador es " + numero); numero = numero - 1;
 		}
-		//Tercer ejercicio
+		//Tercer ejercicio (EJERCICIO 2)
 		var principio
 		var fin
 		principio = prompt( "Introduce el primer número")
@@ -56,9 +56,60 @@
 			}	
 		}	
 		
-		//Con el bucle fuera del if (o el if dentro del bucle)
-		//Sin ningún "if" (dos bucles) (DONE)
-		//Con un único while, sin IF (que baje y suba con un unico)
+		//1.- Con el bucle fuera del if (o el if dentro del bucle)
+		//2.- Sin ningún "if" (dos bucles) (DONE)
+		//3.- Con un único while, sin IF (que baje y suba con un unico)
+		//LOS EJERCICIOS POR SEPARADO EN DISTINTAS HOJAS SI FUNCIONAN, AL ESTAR TODOS JUNTOS CON TODAS LAS VARIABLES Y VALORES Y DEMÁS NO SE SI FUNCIONARÁ O NO.
+		
+		//Primer ejercicio:
+		var inicio1 = prompt("Indique el inicio");
+		var fin3 = prompt("Indique el final");
+		inicio1 = parseFloat(inicio1);
+		fin3 = parseFloat(fin3);
+		var contador1 = inicio1;
+		
+			if (inicio1 < fin3) {
+			while (contador1 < fin3);
+				alert(contador1);
+				contador = contador++
+			}
+			else { //Mayor a menor
+			while (contador1 > fin3) {
+				alert(contador1);
+				contador1 = contador1--
+			}	
+
+		}
+		//Primer ejercicio 2ª forma; bucle miestras contador es distinto que fin
+			while (contador1 != fin3) {  //2, 3, 4
+				if (inicio1 < fin3) { //De menor a mayor 2, 3, 4
+					alert(contador1);
+					contador1 = contador1 + 1
+				} else { //Cuando el inicio es mayor o igual (aunque no va a entrar, porque el bucle ya tiene el condicional de ser distinto de 0)
+						alert(contador1);
+						contador1 = contador1 - 1;
+						}
+				}	
+		//Segundo ejercicio forma alternativa (La otra forma arriba)
+			while (contador1 < fin3) {
+				alert(contador1);
+				contador1= contador1 + 1;
+				}
+			while(contador1 > fin3) {
+					alert(contador1);
+					contador1= contador1 - 1 ;
+				} 
+					alert(contador1);
+		//Tercer ejercicio:
+				var contador1 = inicio;
+				var contador2 = inicio;
+			while(contador1 < fin3 || contador2 > fin3){
+				alert(contador1 + " - " + contador2);
+				contador1 = contador1 + 1;
+				contador2 = contador2 - 1;
+			}  alert(contador1 + " - " + contador2);	
+			
+			//LOS EJERCICIOS POR SEPARADO EN DISTINTAS HOJAS SI FUNCIONAN, AL ESTAR TODOS JUNTOS CON TODAS LAS VARIABLES Y VALORES Y DEMÁS NO SE SI FUNCIONARÁ O NO.
 	</script>
 	</body>	
 </html> 
