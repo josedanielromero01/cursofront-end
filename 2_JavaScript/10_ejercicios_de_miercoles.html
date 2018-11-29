@@ -15,7 +15,13 @@
 		var restoTexto = texto.substring (1);
 		var primeraLetraMayus = primeraLetra.toUppercase()
 		var restoTexto = restoTexto.toLowerCase();		
-		document.write("<br/>" + texto.charAt(0) .toUpperCase() + texto.substring(1) .toLowercase();	
+		document.write("<br/>" + texto.charAt(0).toUpperCase() + texto.substring(1).toLowercase());
+			//Ejercicio 3
+			
+		var posPrimerEspacio = texto.IndexOf("");
+		var primeraPalabra = texto.substring(0, posPrimerEspacio);
+		document.write("<br/>" + primeraPalabra.charAt(0).toUpperCase() + primeraPalabra.substring(1).toLowercase());	
+		
 	</script>
 	</body>
 	
