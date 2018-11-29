@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title>Ejercicio 3 </title>
+	</head>
+	<body>
+		<h1>Ejercicio 3</h1>
+	<script>
+		var texto = "juanito rodriguez lopez gonzalez arroyo romero pampliega laguens beltran montalvo redondo sotillo roldan";
+		var posEspacio1 = 0;
+		var letra = texto.charAt(0).toUpperCase();
+		var iniciales = "";
+		while(posEspacio1 >= 0) { 
+					iniciales = iniciales + letra;	
+					//mientras consigamos un espacio
+					//Que pase del espacio a la siguiente letra
+					//Y la ponga en mayúscula
+					posEspacio1 = texto.indexOf(" ", posEspacio1 + 1);
+					letra = texto.charAt(posEspacio1 + 1).toUpperCase(); 
+				}	
+					document.write(iniciales);
+					
+			/* FORMA 2 DE HACERLO:
+					var texto = "juanito rodriguez lopez gonzalez arroyo romero pampliega laguens beltran montalvo redondo sotillo roldan";
+		var posEspacio1 = 0;
+		var letra = "";
+		var iniciales = "";
+		var letra_ = texto.charAt(0).toUpperCase();
+		document.write(letra_);
+		while(posEspacio1 >= 0) { 
+					//mientras consigamos un espacio
+					//Que pase del espacio a la siguiente letra
+					//Y la ponga en mayúscula
+					posEspacio1 = texto.indexOf(" ", posEspacio1 + 1);
+					if (posEspacio1 >= 0) {
+					letra = texto.charAt(posEspacio1 + 1).toUpperCase(); 
+					iniciales = iniciales + letra;	
+					}
+				}	
+					document.write(iniciales); */
+					
+	/*ASÍ ES COMO SE HACE DE MANERA RUDIMENTARIA PARA HACER CADA LETRA CON UNA VARIABLE
+		var texto = "juanito rodriguez lopez gonzalez arroyo romero pampliega laguens beltran montalvo redondo sotillo roldan";
+		var posEspacio1 = texto.indexOf(" ");
+		var letra_1 = texto.charAt(0).toUpperCase();
+		document.write(texto + "<br/>");
+		document.write(letra_1);
+		
+		var letra_2 = texto.charAt(posEspacio1 + 1).toUpperCase();
+		document.write(letra_2);
+		
+		var posEspacio2 = texto.indexOf(" ", posEspacio1 + 1);
+		var letra_3 = texto.charAt(posEspacio2 + 1).toUpperCase();
+		document.write(letra_3);
+		
+		var posEspacio3 = texto.indexOf(" ", posEspacio2 + 1);
+		var letra_4 = texto.charAt(posEspacio3 + 1).toUpperCase();
+		document.write(letra_4); */ 
+	</script>
+	</body>
+	
+</html> 

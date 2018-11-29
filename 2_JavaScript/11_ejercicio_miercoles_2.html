@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title>Ejercicio 2 </title>
+	</head>
+	<body>
+	<h1>Ejercicio 2</h1>
+	<script>
+		var texto = "juan rodriguez lopez arroyo";
+			//Ejercicio 2: Juan Rodriguez.
+		var posEspacio_1 = texto.indexOf(" ");
+		var inicial = texto.charAt(0).toUpperCase();
+		var restoPalabra = texto.substring(1, posEspacio_1).toLowerCase();
+		var propperCase = inicial + restoPalabra;
+		var posEspacio_2;
+		
+			while (posEspacio_1 >= 0) {
+				posEspacio_2 = texto.indexOf(" ", posEspacio_1 + 1);
+					if(posEspacio_2 == -1); {
+						posEspacio_2 = texto.length;
+					}
+				inicial = texto.charAt(posEspacio_1 + 1).toUpperCase();
+				restoPalabra = texto.substring(posEspacio_1 + 2, posEspacio_2);
+				propperCase = propperCase + " " + inicial + restoPalabra;
+				posEspacio_1 = texto.indexOf(" ", posEspacio_1 + 1);
+			}
+					document.write(propperCase + "<br/>");
+	</script>
+	</body>
+	
+</html> 
