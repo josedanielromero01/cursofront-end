@@ -1,0 +1,60 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title>Arrays </title>
+	</head>
+	<body>
+	<h1>Arrays</h1>
+	<script>
+		var notas = new Array();
+		notas [0] = 10;
+		notas [1] = 3;
+		notas [2] = 6;
+		notas [3] = 8.5;
+		notas [4] = 3.25;
+		
+		var i = 0;
+		while(i < 7){
+			document.write("<br/> Elemento " + i + " : " + notas [i]); 
+			i = i + 1;
+		}	
+		
+		var ciudades = ["Madrid", "Barcelona", "Córdoba"];
+		i = 0
+		while( i < 3) {
+			document.write("<br/>" + i + ": " + ciudades [i]);
+			i = i+ 1;
+		}
+		var marcas = new Array("Ferrari", "Lamborghini", "Maserati");
+			i = 0
+		while( i < 3) {
+			document.write("<br/>" + i + ": " + marcas [i]);
+			i = i + 1;
+		}
+		var arrayVacio = []; //New array
+		
+		var moviles = new Array();
+		moviles[0] = new Object();
+		moviles[0].marca = "iPhone"
+		moviles[0].ram = 2;
+		
+		moviles[1] = new Object();
+		moviles[1].marca = "Samsung"
+		moviles[1].ram = 4;
+		
+		moviles[3] = new Object();
+		moviles[3].marca = "LG"
+		moviles[3].ram = 1;
+		
+		moviles[1].ram = 6;
+		document.write("<br/>RAM Ultimo elemento:" + moviles[moviles.length - 1].ram + "GB");
+		/*document.write("<br/> Elemento 0: " + notas [0]); 
+		document.write("<br/> Elemento 1: " + notas [1]); 
+		document.write("<br/> Elemento 2: " + notas [2]); 
+		document.write("<br/> Elemento 3: " + notas [3]); 
+		document.write("<br/> Elemento 4: " + notas [4]); */
+	</script>
+	</body>
+	
+</html> 

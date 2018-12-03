@@ -1,0 +1,30 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title> Ejercicios Arrays</title>
+	</head>
+	<body>
+	<h1> Ejercicios Arrays</h1>
+	<script>
+	/*Ejercicios: 
+- Pedir al usuario las ciudades a las que quiere viajar.
+- Si el usuario no pone nada, el programa termina y se muestra su lista de ciudades.*/
+		var ciudades = new Array();
+		var nuevaciudad = prompt("Introduzca una ciudad (o nada para terminar)");
+		var i = 0;
+		
+		while (nuevaciudad != "") {
+			ciudades[i] = nuevaciudad;
+			i = i + 1;
+			nuevaciudad = prompt("Introduzca una nueva ciudad (o nada para terminar)"); 
+		}
+		i = 0;
+		while ( i < ciudades.length) {
+			document.write("<br/>" + ciudades[i]);
+			i = i + 1;
+		}	
+	</script>
+	</body>
+	
+</html>

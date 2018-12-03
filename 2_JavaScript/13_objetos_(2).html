@@ -1,0 +1,83 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title>Objetos 2 </title>
+	</head>
+	<body>
+	<h1>Objetos 2</h1>
+	<script>
+	//Llamamos a la función constructora del objeto básico de JS. Con la  palabra clave new, le decimos a JS que queremos un nuevo objeto ( invocando a alguna función constructora) del tipo que sea, en este caso el básico de JS.
+	var persona_1 = new Object();
+		persona_1.nombre = "Ana";
+		persona_1.apellido_1 = "Pérez";
+		persona_1.apellido_2 = "Rodríguez";
+		persona_1.edad = 25;
+		persona_1.edad = parseFloat(persona_1.edad)
+		
+		var persona_2 = new Object();
+		persona_2.nombre = "Guadalupe";
+		persona_2.primerApellido = "Erena";
+		persona_2.segundoApellido = "Rammos";
+		persona_2.edad = 15;
+		persona_2.edad = parseFloat(persona_2.edad)
+	
+	var orden = prompt("Elija como quiere ordenar los datos: Si usted quiere que el orden sea por nombre elija 'N', si usted quiere que sea por apellidos elija 'A' y si usted quiere que sea por edad elija 'E'");
+	var persona1 = ("Nombre: " + persona_1.nombre + "<br/>" + "Primer apellido: " + persona_1.apellido_1 + "<br/>" + "Segundo apellido: " + persona_1.apellido_2 + "<br/>" + "Edad: " + persona_1.edad + "<br/>");
+	
+	var persona2 = ("Nombre: " + persona_2.nombre + "<br/>" + "Primer apellido: " + persona_2.primerApellido + "<br/>" + "Segundo apellido: " + persona_2.segundoApellido + "<br/>" + "Edad: " + persona_2.edad + "<br/>");
+	
+	while (orden != "A" && orden != "N" && orden != "E") {
+		orden = prompt("Venga dígame como lo quiere ordenar que se ha equivocado escribiendolo. Recuerda 'N' = nombre, 'A' = Apellido, 'E' = Edad ")
+	}	
+	
+	if (orden == "N") {
+			if( persona_1.nombre < persona_2.nombre) {
+				document.write(persona1 + "<br/>" + persona2);
+			}	else {
+					documet.write(persona2 + "<br/>" + persona1);
+				}	
+	}			
+	if (orden == "A") {			
+		if(persona_1.apellido_1 < persona_2.primerApellido){
+			document.write(persona1 + "<br/>" + persona2);
+		}		else {
+					document.write(persona2 + "<br/>" + persona1);
+				}
+				
+	}	
+	
+	if (orden == "E") {
+		if(persona_1.edad < persona_2.edad) {
+			document.write(persona1 + "<br/>" + persona2);
+		}		else { 
+					document.write(persona2 + "<br/>" + persona1);
+				}	
+			
+	}		
+			
+		/*var persona_2 = new Object();
+		persona_2.nombre = prompt("Dime tu nombre");
+		persona_2.primerApellido = prompt("Dime tu primer apellido");
+		persona_2.segundoApellido = prompt("Dime tu segundo apellido");
+		persona_2.edad = prompt("Dime tu edad ");
+		persona_2.salario = prompt("Dime el salario de " + persona_2.nombre );
+		persona_2.salario = parseFloat(persona_2.salario)
+		
+		document.write(persona_2.primerApellido + " " + persona_2.segundoApellido + "," + persona_2.nombre);
+		document.write("<br/>");
+		document.write("Edad: " + persona_2.edad);
+		document.write("<br/>");
+		document.write( "Salario de Ana: " + persona_2.salario + "€");
+		document.write("<br/>");
+		if(persona_2.salario > 0) {
+			document.write("<br/> Tiene trabajo");
+		} else {
+				document.write("<br/> No tiene trabajo");
+			}	
+		*/
+		
+	</script>
+	</body>
+	
+</html> 
