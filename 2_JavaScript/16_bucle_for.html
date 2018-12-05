@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title>Ejemplos de bucle for y do-while </title>
+	</head>
+	<body>
+	<h1>Ejemplos de bucle for y do-while</h1>
+	<script>
+		//Bucle for:
+			document.write("<table border=\"1\">");
+			document.write("<tr>");
+			for (var fila = 1; fila <= 10; fila++) {
+			document.write("<td>" + "Tabla " + fila + "</td>");
+			}
+			document.write("</tr>");
+		for (var i = 1; i <= 10; i++) {	
+			document.write("<tr>");
+			for (var fila = 1; fila <= 10; fila++) {
+			document.write("<td>" + fila + " * " + i + " = " + fila*i + "</td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>"); 
+	</script>
+	</body>
+	
+</html> 
