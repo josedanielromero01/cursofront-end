@@ -1,0 +1,31 @@
+<DOCTYPE html>
+        <html lang="es">
+        <meta charset="UTF-8"/>
+        <head>
+            <title>Funciones con retorno </title>
+            </head>
+            <body>
+            <h1>Funciones con retorno</h1>
+            <script>
+                //Funciones que devuelven un valor
+                function dameTitulo(){
+                    return "Título funciones con retorno"; 
+                }
+                document.write("<h1>" + dameTitulo() + "</h1>");
+                document.write("<h2>"+ dameTitulo() + "</h2>");
+                var tituloweb = "<h3>" + dameTitulo()+ "</h3>";
+                document.write(tituloweb);
+
+                function dateCabecera(texto,nivel) //nivel= h1,h2... 
+                {
+                    var abreH = "<H" + nivel + ">";
+                    var cierraH = "</H" + nivel + ">";
+                    return abreH + texto + cierraH;
+                }
+                document.write(dateCabecera("cabecera nivel 1", 1));
+                document.write(dateCabecera("cabecera nivel 2", 2));
+                document.write(dateCabecera("cabecera nivel 3", 3));
+            </script>
+            </body>
+            
+        </html> 

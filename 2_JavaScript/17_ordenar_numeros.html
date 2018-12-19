@@ -1,0 +1,80 @@
+<DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8"/>
+<head>
+	<title> Ordenar números</title>
+	<h1>Ordenar números</h1>
+	</head>
+	<body>
+	<script>
+		var numeros = new Array ();
+			numeros[0] = 2;
+			numeros[1] = 4;
+			numeros[2] = 1;
+			numeros[3] = 7;
+			numeros[4] = 3;
+			numeros[5] = 3;
+			numeros[6] = 2;
+			numeros[7] = 6;
+		
+			var numerosOrd = new Array();	
+			var numMenor = numeros[0];
+			
+			/*if (numMenor > numeros[1]){
+				console.log("el 0 es mayor");
+			}	
+			
+			if (numMenor > numeros[2]){
+				numMenor = numeros[2];
+			}
+
+			if (numMenor > numeros[3]){
+				numMenor = numeros[3];
+			}	
+
+			if (numMenor > numeros[4]){
+				numMenor = numeros[4];
+			}
+			
+			if (numMenor > numeros[5]){
+				numMenor = numeros[5];
+			}
+				
+			if (numMenor > numeros[6]){
+				numMenor = numeros[6];
+			}	
+			
+			if (numMenor > numeros[7]){
+				numMenor = numeros[7];
+			}
+			document.write("Num menor=" + numMenor + "</br>");
+			document.write("Array: " + "</br>");
+			for(var i = 0; i < 8; i++){ //i = i+1
+			document.write(numeros[i]+ "</br>"); 
+			} */
+			
+			for (var i = 0; i < 8; i++);{
+			
+				if(numMenor > numeros[i]) {
+					numMenor = numeros[i];
+					posMenor = i;
+				}
+			}	
+				document.write("Num menor=" + numMenor + "<br/>");
+				
+				numerosOrd[0] = numMenor;
+				var segMenor = numerosOrd[0];
+				
+				for (var i = 0; i < 8; i ++){
+					if( numMenor != segMenor) {
+						if (segMenor > numeros[i]) {
+							segMenor = numeros[i];
+						}
+					}
+				}	
+				documemt.write("Array: " + "</br>");
+				
+	</script>
+	</body>
+	
+</html> 
