@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+  /*  var nota1 = prompt("Introduzca la primera nota");
+    nota1 = parseInt(nota1);
+    var nota2 = prompt("Introduzca la segunda nota");
+    nota2 = parseInt(nota2);
+    var nota3 = prompt("Introduzca la tercera nota");
+    nota3 = parseInt(nota3);
+    var suma = nota1 + nota2 + nota3;
+    var promedio = suma / 3;
+    if(promedio >= 7){
+        document.write("Su nota de promedio es: " + promedio + " está usted promocionado");
+    }   else{
+            document.write("Su nota de promedio es: " + promedio + " usted no está promocionado y tendrá que repetir las pruebas");
+        } */
+
+
+
+
+
+
+
+
+        //Segunda parte
+        var notas = new Array();
+        var cantidadTexto = prompt("Ingrse cantidad de notas", "");
+        var cantidad = parseInt(cantidadTexto);
+
+        for(var i = 0; i <cantidad; i++){
+            var notaTexto=prompt("Ingrese primera nota", "");
+            notas[i] = parseInt(notaTexto);
+        }
+        var suma = 0;
+
+        for(i = 0; i < notas.length; i++){
+            suma = suma + notas[i];
+        }
+
+        var promedio;
+        promedio = suma/notas.length;
+
+
+    if(promedio >= 7){
+        document.write("Su nota de promedio es: " + promedio + " está usted promocionado");
+    }   else{
+            document.write("Su nota de promedio es: " + promedio + " usted no está promocionado y tendrá que repetir las pruebas");
+        }
+
+
+
+
+
+
+    
+</script> 
+</body>
+</html>

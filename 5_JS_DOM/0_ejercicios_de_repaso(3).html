@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function mostrarElMenor(numero1, numero2, numero3)
+    {
+    if(numero1 < numero2  < numero3){
+        return(numero1);
+    }   else if (numero2 < numero1  < numero3 ){
+            return(numero2);
+    }       else if (numero3 < numero2  <numero1){
+                return(numero3)
+    }
+    }
+    document.write(mostrarElMenor(70,12,60));
+
+</script>
+</body>
+</html>

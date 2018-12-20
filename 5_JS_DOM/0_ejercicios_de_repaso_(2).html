@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var numero = 8;
+    numero = parseInt(numero);
+    while (numero <= 500){
+        document.write(numero + " - ");
+        numero = numero + 8;
+    }
+
+
+    /* OTRA FORMA 
+        contador = 0;
+        while(contador < 500){
+            if(contador % 8==0){
+                document.write(contador + " - ");
+            }
+            contador = contador + 1;
+        }
+
+        OTRA FORMA 
+        contador = 0;
+        while (contador < 500 / 8){
+            document.write( (contador*8) + " - ");
+            coontador = contador + 1;
+        } */
+</script>
+</body>
+</html>
