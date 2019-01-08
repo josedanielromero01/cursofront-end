@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <h1>Ejercicio 8, 3</h1>
+    <h2>Deducir el número de caracteres</h2>
+        <input type="button" value="validar" onclick="validar();"/>
+        <input type="number" value="0" id="validar"/>
+        <div id="divMensaje">
+            Resultado:
+        </div>
+
+    <script>
+        //Confeccionar un programa que cargue numero entero y diga si es de una cifra de dos o de tres.
+        function validar(){
+            
+            var inputNumero = document.getElementById("validar");
+            var valorNumero = parseInt(inputNumero.value);
+            var divMensaje = document.getElementById("divMensaje");
+            // Mediante nodos
+           // var nodeResult = document.createTextNode("Número " + valorNumero);
+            // divMensaje.appendChild(nodeResult)
+           // divMensaje.childNodes[0] = "Número " + valorNumero;
+            // Sustituyendo HTML interno
+            if(valorNumero < 0 || valorNumero >= 999 || isNaN(valorNumero)){
+                divMensaje.innerHTML=("Error: Introduzca número positivo menor que 1000");
+            }   else{
+                    if(valorNumero < 10){
+                        divMensaje.innerHTML= "1 cifra";
+                    }       else if(/*valorNumero >= 10 &&*/ valorNumero < 100){
+                                divMensaje.innerHTML= "2 cifras";
+                    }               else{
+                                        divMensaje.innerHTML="3 cifras"
+                    }
+            }
+            var valorNumeroEnTexto = "" + valorNumero;
+
+            if(valorNumero < 0 || valorNumero >= 999){
+                divMensaje.innerHTML=("Error: Introduzca número positivo menor que 1000");
+            }       else{
+                      divMensaje.innerHTML += "<br/>"+ valorNumeroEnTexto.length + "cifras";
+                    }
+            //  divMensaje.innerHTML= "Número " + valorNumero;    
+        }
+        
+        
+    </script>
+</body>
+</html>
