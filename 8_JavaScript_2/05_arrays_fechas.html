@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="div_texto"></div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"> </script>
+        <script>
+            //Creamos un array con fechas
+            //Ordenamos por defecto de sort(alfabetico segun Joana)
+            //Haremos una funcion especifica
+            function compararPorAnio
+            (a,b){
+                if(a.getFullYear() > b.getFullYear()){
+                    return 1;
+                }       else if (a.getFullYear() < b.getFullYear()){
+                            return -1;
+                }               else{
+                    return 0;
+                }
+            }
+
+
+            function funcionPrincipal(){
+                var fechas =[
+                    new Date(1521402368019),
+                    new Date(2018, 12, 1, 9), //9 de la mañana del 1 de diciembre
+                    new Date("January 8, 2019 09:00:00"),
+                    new Date("February 14, 2018 09:00:00"),
+                    new Date("November 2, 2049 09:00:00"),
+
+                ];
+            $("#div_texto").html( (new Date()).toString());
+            //Mostramos las fechas tal cual:
+            $("#div_texto").append("<h2>" + fechas.join("<br/>") + "</h2>");
+            var fechasSort = fechas.sort();
+            $("#div_texto").append("<h2>" + fechas.join("<br/>") + "</h2>");
+            $("#div_texto").append("<br/><h2>Resultado: " + compararPorAnio
+            (new Date(), fechas[3]) + "</h2>");
+            fechasSort = fechas.sort(compararPorAnio);
+            $("#div_texto").append("</br><h2>" + fechasSort.join("</br>") + ("</h2>"));
+
+            }
+            jQuery(document).ready(funcionPrincipal);
+        </script>
+       
+</body>
+</html>
