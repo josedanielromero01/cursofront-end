@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+        .button {
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: #4CAF50;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+background-color: #3e8e41;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+    </style>
+<body>
+    <h2>Windows Location "HOST"</h2>
+    
+    <button class="button" onclick="enseñaHost()"> Veamos el host.</button>
+    <div id="div_texto">
+         <a id="elHost" href="https://www.google.com/es:1111"></a>
+    <!--No funciona porque está en local-->
+     </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"> </script>
+    <script>
+        
+        function enseñaHost() {
+   /* var elem = $("#elHost");   
+    var width = 1; */
+        
+        var elHostt = $("#elHost");
+        $("#div_texto").append("<p>" + "<b>El host de la página es: " + elHost.host + "</b>" + "</p>");
+        }
+    </script>
+</body>
+</html>
