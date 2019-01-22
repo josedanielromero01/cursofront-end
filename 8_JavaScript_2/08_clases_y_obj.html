@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Clases y objetos</h1>
+<script>
+    //Sólo en EcmaScript 6
+    class Rectangulo {
+        //Se definen como las características que todo objeto de esta clse tiene que tener
+        constructor(nuevoAncho, nuevoAlto){
+            //Al instanciarse, se aplican los valores recibidos en el constructor a las variables miembro
+            this.ancho = 0;
+            this.alto = 0; 
+        }
+        //Sólo ponemos el nombre del método, y los parámetros entre paréntesis, seguido del cuerpo
+        area(){
+            var areaTotal = this.ancho * this.alto;
+            return areaTotal;
+        }
+        perimetro(){
+            return this.ancho * 2 + this.alto * 2;
+            //Es lo mismo que lo de arriba pero con menos código
+        }
+    }
+    var otroRect = new Rectangulo(5,3);
+    document.write("<h2>Área del otro rectángulo: " + otroRect.area() + "</h2>");
+    document.write("<h3>Perímetro del otro rectángulo: " + otroRect.perimetro() + "</h3>");
+
+    var unRect = new Rectangulo();
+    unRect.ancho = 10;
+    unRect.alto = 6;
+
+    document.write("<h2>Área del primer rectángulo: " + unRect.area() + "</h2>");
+    document.write("<h3>Perímetro del primer rectánngulo: " + unRect.perimetro() + "</h3>");
+
+
+
+
+
+    class Circulo {
+        constructor(){
+            this.radio = 20;
+        }
+
+        area2(){
+            return this.radio * this.radio * Math.PI;
+        }
+        perimetro2(){
+            return this.radio * 2 * Math.PI;
+        }
+    }
+
+    var unCirculo = new Circulo;
+    document.write("<h2>Área del círculo: " + unCirculo.area2() + "</h2>");
+    document.write("<h2>Perímetro del círculo: " + unCirculo.perimetro2() + "</h2>");
+</script>
+</body>
+</html>

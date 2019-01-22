@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Gestor de Portfolio</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/Footer-with-button-logo.css">
+	<style type="text/css">
+		#div_presentacion, #div_form, #div_listado, #div_de_1_en_1 {
+			display: none;
+		}
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Ver más de NAVBAR con Bootstrap: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">Gestor Portfolios</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a id="ver_presentacion" data-que-mostrar="div_presentacion" href="#">Inicio</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ver portfolios <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<!-- Ver data y como obtenerlo: https://api.jquery.com/data/ -->
+							<li><a href="#" id="ver_listado" data-que-mostrar="div_listado">Listado completo</a></li>
+							<li><a href="#" id="ver_1_en_1" data-que-mostrar="div_de_1_en_1">De 1 en 1</a></li>
+							<li><a href="#" id="ver_por_categ" >Por categorías</a></li>
+						</ul>
+					</li>
+					<li><a href="#" id="ver_alta" data-que-mostrar="div_form">Nuevo</a></li>
+					<li><a href="#">Eliminar</a></li>
+				</ul>
+				<form class="navbar-form navbar-left">
+					<div class="input-group">
+						<input id="texto_busqueda" class="form-control" type="text" placeholder="Introduzca tecnología">
+						<div class="input-group-button">
+							<button id="btnBuscar" class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+				<ul >
+					<li><a href="#"><span ></span> Sign Up</a></li>
+					<li><a href="#"><span ></span> Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="container">
+		<div id="div_presentacion">
+			<h1>Presentación Gestor Portfolio</h1>
+			<p>Una imágen de presentación estaría bien </p>
+			<br /> <br /> <br />
+			<br />
+			<h2>Proyecto conjunto</h2>
+			<p>Aquí pretendemos ... bla bla bla bla bla bla bla bla bla bla bla bla </p>
+			<p>Y también pretendemos ... bla bla bla bla bla bla bla bla bla bla bla bla </p>
+			<br /> <br /><br /> <br /><br /> <br />
+			<br />
+			<p>Y también pretendemos ... bla bla bla bla bla bla bla bla bla bla bla bla </p>
+		</div>
+		<div id="div_form">
+			<!-- Formulario Bootstrap: https://getbootstrap.com/docs/4.0/components/forms/ -->
+			<form >
+				<div >
+					<div> </div>
+					<label >Nombre y apellidos:</label>
+					<div>
+						<input type="text" id="nombre" required="true" placeholder="Nombre y apellidos"  />
+					</div>
+					<div > </div>
+				</div>
+				<div >
+					<div > </div>
+					<label >Descripción:</label>
+					<div >
+						<textarea id="descripcion"  required="true" placeholder="Descripción" /></textarea>
+					</div>
+					<div > </div>
+				</div>
+				<div >
+					<div > </div>
+					<label for="nombre" >Nombre ficheros:</label>
+					<div >
+						<input type="text" id="nombre_fichero" required="true" placeholder="Introducir nombre sin extensión: nombre_apellidos (nombre_apellidos.png para imagen, nombre_apell.html para CV)"
+						  />
+					</div>
+					<div > </div>
+				</div>
+				<div >
+					<div > </div>
+					<input id="altaPortfolio" type="submit" value="AÑADIR" />
+					<input id="eliminarPortfolio" type="submit" value="ELIMINAR" />
+					<div > </div>
+				</div>
+			</form>
+		</div>
+		<div id="div_listado">
+			<h2>Listado CVs y Portfolios</h2>
+			<h3>Usando de bootstrap: .table .table-striped .table-bordered .table-hover .table-sm</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Descripcion</th>
+						<th>Curriculum</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Todos estos serán eliminados -->
+					<tr>
+						<td>Ana Perez</td>
+						<td>Desarrolladora Front-End maquetadora y programadora</td>
+						<td><a href="ejemplo_cv_1.html">Ver CV</a></td>
+					</tr>
+					<tr>
+						<td>Rubén González</td>
+						<td>Desarrollador Front-End maquetador y marketing</td>
+						<td><a href="ejemplo_cv_2.html">Ver CV</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="div_de_1_en_1">
+			<div >
+				<input  type="button" value="&laquo;" />
+				<div > </div>
+				<input type="button" value="&raquo;"  />
+			</div>
+			<div>
+				<h1>Curriculum Vitae</h1>
+				<h2>Datos personales</h2>
+				<dl>
+					<dt>Nombre:</dt>
+					<dd>Pues el nombre</dd>
+					<dt>Email:</dt>
+					<dd>email@dominio.com</dd>
+				</dl>
+				<div>
+					<figure>
+						<!-- Ver más de https://uniwebsidad.com/libros/bootstrap-3/capitulo-4/imagenes -->
+						<img src="images/nom_apell_1.jpg" alt="Foto de Nombre y Apell">
+						<figcaption>Foto o dibujo</figcaption>
+					</figure>
+					<h2>Descripción</h2>
+					<div>
+						<ul>
+							<li>
+								<h3>Grado Superior en Lo que sea </h3>
+								<p>Madrid</p>
+								<p>2016</p>
+							</li>
+						</ul>
+					</div>
+					<a  href="ejemplo_cv_1.html">Ver CV completo</a>
+				</div>
+			</div>
+			<div >
+				<input  type="button" value="&laquo;" />
+				<div > </div>
+				<input  type="button" value="&raquo;" />
+			</div>
+		</div>
+	</section>
+	<!-- Footer (par ver más: https://tutorialzine.com/2016/10/freebie-5-fantastic-bootstrap-footers -->
+	<footer id="myFooter">
+		<div >
+			<div >
+				<div >
+					<h2 ><a href="#"> LOGO </a></h2>
+				</div>
+				<div >
+					<h5>Get started</h5>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Sign up</a></li>
+						<li><a href="#">Downloads</a></li>
+					</ul>
+				</div>
+				<div >
+					<h5>About us</h5>
+					<ul>
+						<li><a href="#">Company Information</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Reviews</a></li>
+					</ul>
+				</div>
+				<div >
+					<h5>Support</h5>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Help desk</a></li>
+						<li><a href="#">Forums</a></li>
+					</ul>
+				</div>
+				<div >
+					<div >
+						<a href="#" ><i class="fa fa-twitter"></i></a>
+						<a href="#" ><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+					</div>
+					<button type="button">Contact us</button>
+				</div>
+			</div>
+		</div>
+		<div>
+			<p>© 2018 Copyright Text </p>
+		</div>
+	</footer>
+
+	<!-- Footer -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+	// Ver más de clases: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes
+	class Portfolio {
+
+		constructor(nombre) {
+			// Aquí usamos arguments. Ver más: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/arguments
+			if (arguments.length == 3) {
+				this.nombre = nombre;		
+			} else {
+				// Ver más console: https://developer.mozilla.org/es/docs/Web/API/Console
+				console.error("Sólo se admite 1 ó 3 argumentos en el constructor");
+			}
+		}
+		htmlTabla() {
+			var nombre = this.nombre;
+			// Para ver explicación: http://2ality.com/2015/01/es6-strings.html
+			var htmlTR = "<tr>" + nombre +"</tr>";
+			return htmlTR;
+		}
+	}
+	// Otro artículo sobre clases: https://www.todojs.com/clases-en-ecmascript-2015-es6/
+	class ListaPortfolios {
+		alta(nombre, descripcion, fichero) {
+		}
+		eliminar(nombre) {
+		}
+		cargarDesdeLocalStorage() {
+		}
+		guardarEnLocalStorage() {
+		}
+		htmlTabla() {
+		}
+		anterior() {
+		}
+		siguiente() {
+		}
+		buscar(palabra) {
+		}
+	}
+	// var portfolios;
+
+	// Otra manera de crear funciones: ver más en https://www.w3schools.com/js/js_function_definition.asp
+	var funcionActualizarTabla = function () {
+	}
+	var inicializar = function() {
+		$("#div_presentacion").show(1000);
+		// $("a[id^='ver_']").click(
+		$("#ver_presentacion,#ver_alta,#ver_listado,#ver_1_en_1").click(
+			function() {
+				var idDIV = $(this).data("que-mostrar");
+				mostrarDIV_Y_ocultarResto(idDIV);
+			}
+		);
+	}
+	var mostrarDIV_Y_ocultarResto = function (id) {
+		$("#div_presentacion").hide(1000);
+		$("#div_form").hide(1000);
+		$("#div_listado").hide(1000);
+		$("#div_de_1_en_1").hide(1000);
+		$(`#${id}`).show(1000);
+	}
+	var mostrarCV = function (index) {
+	}
+	var buscarCV = function(index) {
+	}
+	$(document).ready(inicializar);
+</script>
+
+</html>
