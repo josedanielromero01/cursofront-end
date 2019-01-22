@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style type="text/css">
+/*Selector hermanos*/
+h1 ~ h2 {
+    color: red;
+}
+div > h2 {
+    color: green;
+}
+h1 ~ h2 , div > h2{
+    background-color: orange;
+}
+</style>
+<body>
+    <h1>T&iacute;tulo</h1>
+    <h2>Subt&iacute;tulo adyacente hermano de h1</h2>
+    <div>
+        <h2>T&iacute;tulo adyacente sin H1 de hermano, HIJO</h2>
+        <section>
+        <h2>Subt&iacute;tulo adyacente, NIETO de DIV</h2>
+        </section>
+    </div>
+    <h1>T&iacute;tulo</h1>
+    <p>P&aacute;rrafo de separaci&oacute;n</p>
+    <h2>Subtítulo adyacente con selector general de hermanos</h2>
+</body>
+</html>

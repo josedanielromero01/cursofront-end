@@ -16,22 +16,30 @@
 
     <section>
         <form id="miform" method="get">
-            Nombre: <input type="text" id="nombre"/><br/>
-           Número: <input type="number" id="numero"/><br/>
+            Nombre: <input type="text" id="nombre" placeholder="Introduzca un nombre correctamente" pattern="^[A-Z]{1}[a-z]+$" /><br/>
+            <!--Edad mediante exp reg-->
+           Edad: <input type="text" id="numero" placeholder="Introduzca su edad" pattern="^1?\d{1,2}$"/><br/>
            e-Mail: <input type="email" id="mi_email"/><br/>
            Busqueda: <input type="search" id="busqueda"/><br/>
            URL: <input type="url" id="miurl"/><br/>
-           Teléfono: <input type="tel" id="telefono"/><br/>
+           <!--Teléfono mediante exp reg-->
+           Teléfono: <input type="tel" id="telefono" placeholder="Introduzca su número de teléfono" pattern="^\d{2,3}-? ?\d{6,7}|\d{9}$"/><br/>
+           Código Postal: <input type="text" id="cpostal" placeholder="Introduzca su código postal" pattern="^[0-5]\d{4}$"/> <br/>
+           DNI: <input type="text" id="DNI" placeholder="Introduzca su DNI" pattern="^[0-9]{6,8}[A-Z]$" /> <br/>
+           Fecha de Nacimiento: <input type="date" id="fecha_nacimiento"/><br/>
            Número con min: <input type="range" id="numeromin" min="4" max="40" step="8"/><br/>
            Fecha: <input type="date" id="fechaaa"/><br/>
            Hora: <input type="time" id="hora"/><br/>
            Fecha y Hora: <input type="datetime-local" id="fecha_y_hora"/><br/>
            Mes: <input type="month" id="mes_"/><br/>
            Semana: <input type="week" id="semana_"/><br/>
+           
             <input type="submit" value="Enviar"/>
+
         </form>
     </section>
-    
+     <!--Lo asociamos al formulario que corresponda por ID  -->
+     <input id="otra_cosa" type="text" form="miform"/> 
 </body>
 
 </html>

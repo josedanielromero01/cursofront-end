@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    a[href] {
+        font-size: 20px;
+    }
+    a[href="mailto:holasoygilipollas@correo.com"]{
+        font-style: italic;
+    }
+    a[href*="ejemplo"]{
+        color: red;
+    }
+    a[href^="mailto:"]{
+        color: yellow;
+    }
+    a[href$="php"]{
+        color: pink;
+    }
+    a:hover{
+        background-color: green;
+        font-size: 22px;
+        font-style:oblique;
+    }
+    input:focus{
+        background-color: purple;
+    }
+    input:valid{
+        background-color: lawngreen;
+    }
+    input:invalid{
+        background-color: salmon;
+    }
+    input:nth-child(2n){
+        background-color: black;
+    }
+</style>
+<body>
+    <ul>
+            <li><a >Enlace sin "HREF"</a></li>
+        <li><a href="http://www.google.com/es">Enlace a ejemplo</a></li>
+        <li><a href="mailto:holasoygilipollas@correo.com">Enlace a e-mail</a></li>
+        <li><a href="http://www.unawebdeejemplo.com/ejemplo.php">Enlace a fichero PHP</a></li>
+
+    </ul>
+    <form>
+        <input type="text" required/><br/>
+        <input type="text" required/><br/>
+        <input type="text" required/><br/>
+        <input type="text" required disabled value="Deshabilitado"/><br/>
+        
+    </form>
+</body>
+</html>

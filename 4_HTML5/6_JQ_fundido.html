@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src = "beats-logo-big.jpg" width="400" height="200" />
+        <input type="button" id="input_mostrar" value="Mostrar"/>
+        <input type="button" id="input_ocultar" value="Ocultar"/>
+    </div>
+    <script src="js/jquery-3.3.1.js" ></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#input").eq(1).val("Ocultar");
+                $("#input").eq(1).click( //Cojemos el 2º inpuut)
+                function(){
+                        $("img").eq(0).hide("slow");
+                    }
+                );
+            }
+        );
+    </script>
+</body>
+</html>

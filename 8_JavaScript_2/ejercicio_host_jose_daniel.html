@@ -35,7 +35,6 @@ transform: translateY(4px);
     
     <button class="button" onclick="enseñaHost()"> Veamos el host.</button>
     <div id="div_texto">
-         <a id="elHost" href="https://www.google.com/es:1111"></a>
     <!--No funciona porque está en local-->
      </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -44,11 +43,9 @@ transform: translateY(4px);
     <script>
         
         function enseñaHost() {
-   /* var elem = $("#elHost");   
-    var width = 1; */
         
-        var elHostt = $("#elHost");
-        $("#div_texto").append("<p>" + "<b>El host de la página es: " + elHost.host + "</b>" + "</p>");
+        var elHost = location.host;
+        $("#div_texto").html("<p>" + "<br/>" + "<b>El host de la página es: " + elHost + "</b>" + "</p>");
         }
     </script>
 </body>
