@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="boton" value="Probar"/>
+    <script src="js/jquery-3.3.1.js"></script> 
+   <script>
+       $(document).ready(function(){
+           $("#boton").click(function(){
+               alert(fechaNacim.getDia() + " / " + fechaNacim.getMes() + " / " + fechaNacim.getAnio());
+           })
+       });
+       class FechaDom{
+           constructor(dia,mes,anio){
+            $("body").append(`  <input type="text" id="input1" value="${dia}"/>
+                                <input type="text" id="input2" value="${mes}"/>
+                                <input type="text" id="input3" value="${anio}"/><br/>`);
+           }
+           getDia(){
+                var valorDia = parseInt($("#input1").val());
+                if(isNaN(valorDia)) alert ("Día tiene que ser un número");
+                else if (valorDia< 1 || valorDia > 31)alert("Día fuera de rango");
+                return valorDia;
+           }
+           getMes(){
+                return parseInt($("#input2").val());
+           }
+           getAnio(){
+                return parseInt($("#input3").val());
+           }
+       }
+
+       var dateActual = new Date();
+       var fechaNacim = new FechaDom    (dateActual.getDate(),
+                                        dateActual.getMonth(),
+                                        dateActual.getFullYear());
+
+       var miCumple = new Date(7, 9 /*OCT*/, 1982);
+       /*Crear campos de fecha (FechaDom) a partir de la fecha de cumpleaños pensando como mejorar este "Control":
+       -Añadir etiquetas a los campos
+       -Como hacer para obtener el día,mes,anio con los metodos getDia()... */
+       
+   </script>
+</body>
+</html>
