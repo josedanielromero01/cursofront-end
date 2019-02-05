@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS DOCUMENT */
 
+#html{
+  background: green;
+}
+
+
 #barra_de_inicio{
     text-align: center;
     background-color: orange;

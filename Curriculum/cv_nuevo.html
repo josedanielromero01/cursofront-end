@@ -1,10 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="cv_nuevo.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+/* CSS DOCUMENT */
+
+}
+
+
+#barra_de_inicio{
+    text-align: center;
+    background-color: orange;
+
+}
+
+
+.marco{
+	width: 400px;
+	height: 400px;
+	margin: auto;
+    position: relative;
+    background: blue;
+
+}
+
+.circulo{
+	position: absolute;
+	
+	
+    width: 394px;
+    /* height: 400px; */
+    height: 394px;
+	border-radius: 100%;
+	
+	border-color: red;
+	border-width: 5px;
+    border-style: solid;
+    
+	
+	animation-name: vueltas;
+	animation-duration: 10.5s;
+	animation-iteration-count: nfinite;
+}
+
+@keyframes vueltas{
+	
+	0%{
+	    	width: 400px;
+        left: 0px;
+        background: url(yocongorra.jpg);
+        background-position: center;
+    }
+    
+    10%{
+        width: 0px;
+        left: 200px;
+        background: white;
+    }
+
+    20%{
+        width: 400px;
+        left: 0px;
+        background: url(yocongorra.jpg);
+        background-position: center;
+    }
+
+    30%{
+        width: 0px;
+        left: 200px;
+        background: white;
+    }
+
+    40%{
+        width: 400px;
+        left: 0px;
+        background: url(yocongorra.jpg);
+        background-position: center;
+        
+    }
+
+	50%{
+	    	width: 0px;
+        left: 200px;
+        background: white;
+    }
+    
+    60%{
+        width: 400px;
+        left: 0px;
+        background: url(yocongorra.jpg);
+        background-position: center;
+    }
+    
+    70%{
+        width: 0px;
+        left: 200px;
+        background: white;
+    }
+
+    80%{
+        width: 400px;
+        left: 0px;
+        background: url(yocongorra.jpg);
+        background-position: center;
+    }
+
+    90%{
+        width: 0px;
+        left: 200px;
+        background: white;
+    }
+
+	100%{
+	    	width: 400px;
+        left: 0px;
+        background: url(yocongorra.jpg);
+        background-position: center;
+	}
+}
+
+#intro{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+ 
+}
+
+#datos_personales{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+#trabajos{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+#educacion{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+#programas{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+td{
+    text-align: center;
+}
+progress[value] {
+
+    width: 250px;
+    height: 20px;
+
+    /* Eliminamos la apariencia por defecto */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Quitamos el borde que aparece en Firefox */
+    border: none;
+    
+    /* Aplicamos las dimensiones */
+    width: 250px;
+    height: 20px;
+    
+    /* Aplicamos color a la barra */
+    color: blue;
+    }
+    
+    /* Compatibilidad de color en Firefox y Chrome */
+    progress::-moz-progress-bar { background: #0063a6; }
+    progress::-webkit-progress-value { background: #0063a6; }
+
+
+#html{
+    text-align: right;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#myProgress {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+  }
+  
+  #myBar {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+  }
+
+  #myProgress2 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar2 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress3 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar3 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress4 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar4 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress5 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar5 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress6 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar6 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress7 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar7 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress8 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar8 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress9 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar9 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress10 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar10 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress11 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar11 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress12 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar12 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress13 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar13 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+
+  #myProgress14 {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  #myBar14 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+   
+  }
+    </style>
+                        <!--AQUI EMPIEZA EL HTML-->
     <title>Jose Daniel Romero</title>
 </head>
 <body>
@@ -156,17 +587,6 @@
                 </tbody>
                 </table>
 
-
-
-
-
-
-
-
-
-
-
-
                 <div id="myProgress">
                         <div id="myBar"><MARQUEE SCROLLAMOUNT=10> HTML</MARQUEE></div>
                       </div>
@@ -292,11 +712,229 @@
                         <br>
                         <button onclick="move13()"> Veamos lo que sé.</button>
 
-                      
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
-</body>
+<script>
 
-<script src="cv_nuevo.js"></script>
+var posicion = 5;
+var velocidad = 0.1;
+var d1 = document.getElementById("d1");
+var relojId = setInterval(funCadaDecimaSeg, 10);
+
+function funCadaDecimaSeg() {
+if (posicion >= window.innerWidth - 900){
+    clearInterval(relojId);
+}   else{
+
+posicion += velocidad;
+velocidad += 0.05;
+d1.setAttribute("style", "margin: 0px 0px 0px " + posicion + "px; background: green; width: 500px")
+}
+}
+
+function move() {
+    var elem = document.getElementById("myBar");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 60) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move1() {
+    var elem = document.getElementById("myBar2");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 50) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move2() {
+    var elem = document.getElementById("myBar3");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 30) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move3() {
+    var elem = document.getElementById("myBar4");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 5) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move4() {
+    var elem = document.getElementById("myBar5");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 25) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move5() {
+    var elem = document.getElementById("myBar6");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 11) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move6() {
+    var elem = document.getElementById("myBar7");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 80) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move7() {
+    var elem = document.getElementById("myBar8");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 80) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move8() {
+    var elem = document.getElementById("myBar9");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 35) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move9() {
+    var elem = document.getElementById("myBar10");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 50) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move10() {
+    var elem = document.getElementById("myBar11");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 40) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move11() {
+    var elem = document.getElementById("myBar12");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 50) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move12() {
+    var elem = document.getElementById("myBar13");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 60) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+  function move13() {
+    var elem = document.getElementById("myBar14");   
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+      }
+    }
+  }
+
+</script>
 </html>
